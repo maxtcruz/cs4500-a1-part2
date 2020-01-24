@@ -45,6 +45,6 @@ class Queue : public Object {
     // returns the number of elements in this Queue
     size_t size();
 
-    // returns a string representation of this Queue
+    // returns a string representation of this Queue (optional)
     char* to_string();
 };
