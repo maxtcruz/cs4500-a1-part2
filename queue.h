@@ -5,7 +5,7 @@
 #include "object.h"
 
 /**
- * a class that represents a FIFO queue of Objects
+ * a class that represents a dynamically-sized FIFO queue of Objects
  * @author Max Cruz <cruz.max@husky.neu.edu>, Sean Connolly <connolly.s@husky.neu.edu>
  */
 class Queue : public Object {
@@ -13,11 +13,11 @@ class Queue : public Object {
     // constructs an empty Queue
     Queue();
 
-    // constructs an empty Queue of a desired size
+    // constructs an empty Queue of a desired initial size
     Queue(size_t size);
 
     // frees the Queue from memory
-    ~Queue();
+    virtual ~Queue();
 
     // determines if this Queue is equal to the given Object o
     bool equals(Object* o);
@@ -32,8 +32,15 @@ class Queue : public Object {
     // else returns nullptr
     Object* pop();
 
+    // returns the Object at the front of the Queue, but does not remove it, if one exists
+    // else returns nullptr
+    Object* peek();
+
     // clears the elements in this Queue
     void clear();
+
+    // determines if this Queue is empty
+    bool is_empty();
 
     // returns the number of elements in this Queue
     size_t size();

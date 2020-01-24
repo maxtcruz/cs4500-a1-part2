@@ -21,7 +21,7 @@ class String : public Object {
     String(String* s);
 
     // frees this String's internal array of characters
-    ~String();
+    virtual ~String();
 
     // determines if this String is equal to a given Object o
     bool equals(Object* o);

@@ -9,6 +9,12 @@
  */
 class Object {
   public:
+    // constructs an Object
+    Object();
+
+    // virtual destructor for subclasses
+    virtual ~Object();
+
     // determines if this Object equals another Object o
     virtual bool equals(Object* o);
 
