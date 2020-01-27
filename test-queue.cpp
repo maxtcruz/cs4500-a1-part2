@@ -35,7 +35,7 @@ void queue_equality() {
   Queue* q2 = new Queue();
   q1->push(s1);
   t_true(!q1->equals(q2), "q1 should not equal q2");
-  q2->push(s2);
+  q2->push(s1);
   t_true(q1->equals(q2), "q1 should equal q2");
   q1->push(s1);
   q1->push(s2);
