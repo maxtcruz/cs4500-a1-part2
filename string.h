@@ -8,6 +8,7 @@
 /**
  * a class that represents an immutable string
  * @author Max Cruz <cruz.max@husky.neu.edu>, Sean Connolly <connolly.s@husky.neu.edu>
+ * Reference: https://piazza.com/class/k51bluky59n2jr?cid=166
  */
 class String : public Object {
   public:
@@ -20,6 +21,9 @@ class String : public Object {
     // copies a String's characters into this String
     String(String* s);
 
+    // constructor takes ownership of given character array
+    String(bool steal, char* s);
+
     // frees this String's internal array of characters
     virtual ~String();
 
@@ -29,7 +33,10 @@ class String : public Object {
     // returns 0 if this String equals the given String
     // returns -1 if this String is lesser than the given String
     // returns 1 if this String is greater than the given String
-    int compareTo(String* other);
+    int compare(String* other);
+
+    // # of characters in string, excluding terminator '\0'
+    size_t size();
 
     // computes a hash for this String
     size_t hash();
@@ -38,9 +45,9 @@ class String : public Object {
     // with those of a given String
     String* concat(String * other);
 
-    // returns the length of this String
-    size_t length();
-
     // returns a copy of this String's characters
     char* to_string();
+
+    // print to stdout
+    void print();
 };
