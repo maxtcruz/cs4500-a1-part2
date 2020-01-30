@@ -45,9 +45,6 @@ class String : public Object {
     // with those of a given String
     String* concat(String * other);
 
-    // returns a copy of this String's characters
-    char* to_string();
-
     // print to stdout
     void print();
 };

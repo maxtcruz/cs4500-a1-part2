@@ -22,9 +22,6 @@ class Object {
     // determines if this Object equals another Object o
     virtual bool equals(Object* o);
 
-    // generates a string representation for this Object
-    virtual char* to_string();
-
     // print to stdout
     virtual void print();
 };
