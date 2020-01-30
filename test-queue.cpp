@@ -33,7 +33,7 @@ void queue_equality() {
   String* s2 = new String("two");
   Queue* q1 = new Queue();
   Queue* q2 = new Queue();
-  t_true(q1->equals(q2), "empty queues should be equal")
+  t_true(q1->equals(q2), "empty queues should be equal");
   q1->push(s1);
   t_true(!q1->equals(q2), "q1 should not equal q2");
   q2->push(s1);
@@ -109,10 +109,10 @@ void queue_pop_decrease_size() {
   q1->pop();
   t_true(q1->size() == 3, "size decreases to 3");
   
-  q->pop();
-  q->pop();
-  q->pop();
-  q->pop();
+  q1->pop();
+  q1->pop();
+  q1->pop();
+  q1->pop();
   t_true(q1->size() == 0, "size remains at 0");
 
   OK("queue pop decrease size");
